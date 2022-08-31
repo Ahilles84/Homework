@@ -5,7 +5,7 @@ public class RoundPlug {
     static double diameter;
     public void setRadius(double radius) {
         if (radius <= 0) {
-            throw new IllegalArgumentException("Measures can't be negative or zero!");
+            throw new IllegalArgumentException("Measurments can't be negative or zero!");
         }
         RoundPlug.radius = radius;
     }
