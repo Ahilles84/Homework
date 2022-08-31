@@ -6,13 +6,13 @@ public class Rectangle {
     static double diagonal;
     public void setWidth(double width) {
         if (width <= 0) {
-            throw new IllegalArgumentException("Measures can't be negative or zero!");
+            throw new IllegalArgumentException("Measurments can't be negative or zero!");
         }
         Rectangle.width = width;
     }
     public void setHeight(double height) {
         if (height <= 0) {
-            throw new IllegalArgumentException("Measures can't be negative or zero!");
+            throw new IllegalArgumentException("Measurments can't be negative or zero!");
         }
         Rectangle.height = height;
     }
