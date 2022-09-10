@@ -12,11 +12,10 @@ public class LearnArrays {
         }
         //System.out.println(Arrays.toString(basicArr));
 
-        int[] negativeArr = new int [100000];
-        negativeArr = Arrays.copyOf(basicArr, basicArr.length / 2);
+        int[] negativeArr = Arrays.copyOf(basicArr, basicArr.length / 2);
         //System.out.println(Arrays.toString(negativeArr));
 
-        int[] positiveArr = new int [100000];
+        int[] positiveArr = new int [basicArr.length/2];
         System.arraycopy(basicArr, 100001, positiveArr, 0, basicArr.length / 2);
         //System.out.println(Arrays.toString(positiveArr));
 
