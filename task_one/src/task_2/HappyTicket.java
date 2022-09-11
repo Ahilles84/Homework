@@ -1,6 +1,13 @@
 package task_2;
+
+import java.util.Scanner;
+
 public class HappyTicket {
-	public static int happyTicketsCounter (int number) {
+	public static void main (String[] args) {
+		System.out.println("Enter the number from 1001 to 999999");
+		Scanner scan = new Scanner(System.in);
+		int number = scan.nextInt();
+		scan.close();
 		int happyCounter = 0;
 		while (number > 0) {
 			int tailSum = 0;
@@ -19,9 +26,6 @@ public class HappyTicket {
 			}
 			number--;
 		}
-		return happyCounter;
-	}
-	public static void main (String[] args) {
-		System.out.println(happyTicketsCounter(999999));
+		System.out.println("We'll need " + happyCounter + " souvenirs!");
 	}
 }
