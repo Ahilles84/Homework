@@ -22,29 +22,29 @@ public class LearnArrays {
         int[] temp = new int[basicArr.length];
         int k = 0;
         for (int i = basicArr[basicArr.length-1]; i > 0; i--) {
-            int countDiv = 0;
+            int countDividers = 0;
             for (int j = i; j > 0; j--) {
                 if (i % j == 0) {
-                    countDiv++;
-                    if (countDiv > 2){
+                    countDividers++;
+                    if (countDividers > 2){
                         break;
                     }
                 }
             }
-            if (countDiv <= 2) {
+            if (countDividers <= 2) {
                 temp[k] = i;
                 k++;
             }
         }
-        int countPrime = 0;
+        int countPrimeNumbers = 0;
         for (int val:temp) {
             if (val > 1){
-                countPrime++;
+                countPrimeNumbers++;
             }
         }
-        int[] primeArray = Arrays.copyOf(temp, countPrime);
+        int[] primeArray = Arrays.copyOf(temp, countPrimeNumbers);
         Arrays.sort(primeArray);
-        System.out.println("There are " + countPrime + " prime numbers in our primeArray.");
+        System.out.println("There are " + countPrimeNumbers + " prime numbers in our primeArray.");
         System.out.println(Arrays.toString(primeArray));
     }
 }
