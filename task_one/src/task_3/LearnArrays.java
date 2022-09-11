@@ -10,14 +10,14 @@ public class LearnArrays {
             basicArr[i] = element;
             element ++;
         }
-        //System.out.println(Arrays.toString(basicArr));
+        System.out.println("[" + basicArr[0] + " ... " + basicArr[basicArr.length-1] + "]");
 
         int[] negativeArr = Arrays.copyOf(basicArr, basicArr.length / 2);
-        //System.out.println(Arrays.toString(negativeArr));
+        System.out.println("[" + negativeArr[0] + " ... " + negativeArr[negativeArr.length-1] + "]");
 
         int[] positiveArr = new int [basicArr.length/2];
         System.arraycopy(basicArr, 100001, positiveArr, 0, basicArr.length / 2);
-        //System.out.println(Arrays.toString(positiveArr));
+        System.out.println("[" + positiveArr[0] + " ... " + positiveArr[positiveArr.length-1] + "]");
 
         int[] temp = new int[basicArr.length];
         int k = 0;
