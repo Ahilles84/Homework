@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HappyTicket {
 	public static void main (String[] args) {
-		System.out.println("Enter the number from 1001 to 999999");
+		System.out.println("Enter a number from 1001 to 999999");
 		Scanner scan = new Scanner(System.in);
 		int number = scan.nextInt();
 		scan.close();
