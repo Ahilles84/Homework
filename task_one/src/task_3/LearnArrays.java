@@ -16,7 +16,7 @@ public class LearnArrays {
         System.out.println("[" + negativeArr[0] + " ... " + negativeArr[negativeArr.length-1] + "]");
 
         int[] positiveArr = new int [basicArr.length/2];
-        System.arraycopy(basicArr, 100001, positiveArr, 0, basicArr.length / 2);
+        System.arraycopy(basicArr, basicArr.length/2+1, positiveArr, 0, basicArr.length / 2);
         System.out.println("[" + positiveArr[0] + " ... " + positiveArr[positiveArr.length-1] + "]");
 
         int[] temp = new int[basicArr.length];
