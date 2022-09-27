@@ -4,6 +4,15 @@ public abstract class Aircraft {
     private int rangeOfFlight;
     private int cruisingSpeed;
     private String registrationNumber;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Aircraft(int rangeOfFlight, int cruisingSpeed, String registrationNumber) {
         if (rangeOfFlight <= 0 || cruisingSpeed <= 0){
@@ -44,8 +53,7 @@ public abstract class Aircraft {
 
     @Override
     public String toString() {
-        return "Aircraft{" +
-                "Range of flight: " + rangeOfFlight +
+        return name + "{Range of flight: " + rangeOfFlight +
                 "km., cruising speed: " + cruisingSpeed +
                 "km/h., registration number: " + registrationNumber + '\'' +
                 '}';
