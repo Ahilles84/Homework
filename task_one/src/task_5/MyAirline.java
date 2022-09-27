@@ -27,20 +27,19 @@ public class MyAirline {
                 "Passenger capacity: " + aircraft.getPassengerCapacity());
     }
 
-    public static Aircraft[] sortByRange(Aircraft[] airPark){
-        Aircraft[] sortedByRange = new Aircraft[airPark.length];
-        int index = 0;
-        while (index < sortedByRange.length) {
-            int maxRange = airPark[index].getRangeOfFlight();
-            for (int i = 1; i < airPark.length; i++) {
-                if (airPark[i].getRangeOfFlight() > maxRange) {
-                    maxRange = airPark[i].getRangeOfFlight();
-                    sortedByRange[index] = airPark[i];
+    public static void sortByRange(Aircraft[] airPark){
+        for (int i = 0; i < airPark.length; i++) {
+            int maxRange = airPark[i].getRangeOfFlight();
+            Aircraft temp = null;
+            for (int j = i; j < airPark.length; j++) {
+                if (airPark[j].getRangeOfFlight() >= maxRange) {
+                    maxRange = airPark[j].getRangeOfFlight();
+                    temp = airPark[j];
+                    airPark[j] = airPark[i];
+                    airPark[i] = temp;
                 }
             }
-            index++;
         }
-        return sortedByRange;
     }
 
     public static void main(String[] args) {
@@ -53,6 +52,7 @@ public class MyAirline {
         System.out.println(totalCarrying(myAirPark));
         System.out.println(totalPassengerCapacity(myAirPark));
         showAircraftSpec(ka32);
-        System.out.println(Arrays.toString(sortByRange(myAirPark)));
+        sortByRange(myAirPark);
+        System.out.println(Arrays.toString(myAirPark));
     }
 }
