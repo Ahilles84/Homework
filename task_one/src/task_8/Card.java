@@ -10,19 +10,16 @@ public class Card {
         this.PIN = pin;
         this.account = account;
     }
-
+    public int getPIN() {
+        return PIN;
+    }
     public int getAccount() {
         return account;
     }
-
     public void setAccount(int account) {
         this.account = account;
     }
-    public boolean checkPIN(){
-        Scanner scan = new Scanner(System.in);
-        int userInput = scan.nextInt();
-        return userInput == PIN;
-    }
+
 }
 
 
