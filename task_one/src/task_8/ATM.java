@@ -2,8 +2,10 @@ package task_8;
 
 import java.util.Scanner;
 
+@SuppressWarnings("ThrowablePrintedToSystemOut")
 public class ATM {
     public static boolean checkPIN(Card card){
+        System.out.println("Please enter PIN code");
         Scanner input = new Scanner(System.in);
         int userInput = input.nextInt();
         if (userInput != card.getPIN()){
@@ -21,8 +23,6 @@ public class ATM {
             card.setAccount(card.getAccount() - withdrawalAmount);
         }
     }
-
-
     public static void main(String[] args){
         try {
             Card visa = new DebitCard(1234);
