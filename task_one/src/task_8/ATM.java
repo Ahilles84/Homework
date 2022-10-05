@@ -2,7 +2,6 @@ package task_8;
 
 import java.util.Scanner;
 
-@SuppressWarnings("ThrowablePrintedToSystemOut")
 public class ATM {
     public static boolean checkPIN(Card card){
         System.out.println("Please enter PIN code");
@@ -36,7 +35,7 @@ public class ATM {
             cashWithdrawal(mastercard, 10550);
             System.out.println(mastercard.getAccount());
         } catch (IllegalArgumentException ex){
-            System.err.println(ex);
+            System.err.println(ex.getMessage());
         } finally {
             System.out.println("Have a nice day!");
         }
