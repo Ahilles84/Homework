@@ -6,16 +6,6 @@ public class DebitCard extends Card{
     }
 
     @Override
-    public int getPIN() {
-        return super.getPIN();
-    }
-
-    @Override
-    public int getAccount() {
-        return super.getAccount();
-    }
-
-    @Override
     public void setAccount(int account) {
         if(account < 0){
             throw new IllegalArgumentException("Not enough money");

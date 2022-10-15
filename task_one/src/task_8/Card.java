@@ -1,14 +1,14 @@
 package task_8;
 
 public abstract class Card {
-    private final int PIN;
+    private final int pin;
     private int account;
 
     public Card(int pin){
-        this.PIN = pin;
+        this.pin = pin;
     }
-    public int getPIN() {
-        return PIN;
+    public int getPin() {
+        return pin;
     }
     public int getAccount() {
         return account;
