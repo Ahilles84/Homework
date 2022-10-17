@@ -25,6 +25,5 @@ public class CardholderService implements AutoCloseable {
 
     @Override
     public void close() throws Exception {
-
     }
 }
