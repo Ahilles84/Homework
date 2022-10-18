@@ -15,8 +15,9 @@ public class Main {
         String str7 = "c1";
         String str8 = "c5";
         List<String> myList = List.of(str1,str2,str3,str4,str5,str6,str7,str8);
-        String newList = myList.stream().filter(str -> !str.contains("3")).
-                //вот тут должна быть сортировка по цифре по возрастанию
+        String newList = myList.stream().
+                filter(str -> !str.contains("3")).
+                sorted(Comparator.comparingInt(str->str.charAt(1))).
                 sorted(Comparator.reverseOrder()).
                 skip(1).
                 map(str -> str.replace("1", "9")).
