@@ -1,11 +1,11 @@
 package task_12;
 
-public class TheGame {
+public class GameProcess {
 
     private final Character player1;
     private final Character player2;
 
-    public TheGame(Character player1, Character player2) {
+    public GameProcess(Character player1, Character player2) {
         this.player1 = player1;
         this.player2 = player2;
     }
