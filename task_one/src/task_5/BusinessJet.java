@@ -1,52 +1,37 @@
 package task_5;
 
-public class BusinessJet extends Airplane{
+public class BusinessJet extends Airplane implements Passenger{
     private int passengerCapacity;
     private boolean internetAvailability;
     private boolean showerAvailability;
 
-    public BusinessJet(int rangeOfFlight, int cruisingSpeed, String registrationNumber, TypeOfEngine typeOfEngine, int passengerCapacity, boolean internetAvailability, boolean showerAvailability) {
-        super(rangeOfFlight, cruisingSpeed, registrationNumber, typeOfEngine);
-        if(passengerCapacity <= 0){
-            throw new IllegalArgumentException("These parameters can't be negative or zero!");
-        }
+    public BusinessJet(String name, String registrationNumber, int rangeOfFlight, int cruisingSpeed, TypeOfEngine typeOfEngine, int passengerCapacity, boolean internetAvailability, boolean showerAvailability) {
+        super(name, registrationNumber, rangeOfFlight, cruisingSpeed, typeOfEngine);
         this.passengerCapacity = passengerCapacity;
         this.internetAvailability = internetAvailability;
         this.showerAvailability = showerAvailability;
     }
 
-    public int getPassengerCapacity() {
-        return passengerCapacity;
-    }
-
-    public void setPassengerCapacity(int passengerCapacity) {
-        this.passengerCapacity = passengerCapacity;
-    }
-
-    public boolean isInternetAvailability() {
+    public boolean isInternetAvailable() {
         return internetAvailability;
     }
 
-    public void setInternetAvailability(boolean internetAvailability) {
-        this.internetAvailability = internetAvailability;
-    }
-
-    public boolean isShowerAvailability() {
+    public boolean isShowerAvailable() {
         return showerAvailability;
     }
-
-    public void setShowerAvailability(boolean showerAvailability) {
-        this.showerAvailability = showerAvailability;
-    }
-
     @Override
-    public TypeOfEngine getTypeOfEngine() {
-        return super.getTypeOfEngine();
+    public void showAircraftSpec() {
+        System.out.println("Technical specifications of " + this.getName() + ": \n" +
+                "Registration number: " + this.getRegistrationNumber() + "\n" +
+                "Range: " + this.getRangeOfFlight() + " meters; \n" +
+                "Cruising speed: " + this.getCruisingSpeed() + " km/h; \n" +
+                "Type of engine: " + this.getTypeOfEngine() + "\n" +
+                "Internet: " + (this.isInternetAvailable() ? "Yes" : "No") + "\n" +
+                "Shower on board: " + (this.isShowerAvailable()? "Yes":"No"));
     }
-
     @Override
-    public RotorSystem getRotorSystem() {
-        return null;
+    public int getPassengerCapacity() {
+        return this.passengerCapacity;
     }
 
     @Override

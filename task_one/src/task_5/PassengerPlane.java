@@ -1,27 +1,16 @@
 package task_5;
 
-public class PassengerPlane extends Airplane{
+public class PassengerPlane extends Airplane implements Passenger{
     private int passengerCapacity;
 
-    public PassengerPlane(int rangeOfFlight, int cruisingSpeed, String registrationNumber, TypeOfEngine typeOfEngine, int passengerCapacity) {
-        super(rangeOfFlight, cruisingSpeed, registrationNumber, typeOfEngine);
-        if(passengerCapacity <= 0){
-            throw new IllegalArgumentException("These parameters can't be negative or zero!");
-        }
-        this.passengerCapacity = passengerCapacity;
-    }
-
-    public int getPassengerCapacity() {
-        return passengerCapacity;
-    }
-
-    public void setPassengerCapacity(int passengerCapacity) {
+    public PassengerPlane(String name, String registrationNumber, int rangeOfFlight, int cruisingSpeed, TypeOfEngine typeOfEngine, int passengerCapacity) {
+        super(name, registrationNumber, rangeOfFlight, cruisingSpeed, typeOfEngine);
         this.passengerCapacity = passengerCapacity;
     }
 
     @Override
-    public RotorSystem getRotorSystem() {
-        return null;
+    public int getPassengerCapacity() {
+        return this.passengerCapacity;
     }
 
     @Override

@@ -3,8 +3,8 @@ package task_5;
 public abstract class Airplane extends Aircraft{
     private TypeOfEngine typeOfEngine;
 
-    public Airplane(int rangeOfFlight, int cruisingSpeed, String registrationNumber, TypeOfEngine typeOfEngine) {
-        super(rangeOfFlight, cruisingSpeed, registrationNumber);
+    public Airplane(String name, String registrationNumber, int rangeOfFlight, int cruisingSpeed, TypeOfEngine typeOfEngine) {
+        super(name, registrationNumber, rangeOfFlight, cruisingSpeed);
         this.typeOfEngine = typeOfEngine;
     }
 
@@ -12,16 +12,12 @@ public abstract class Airplane extends Aircraft{
         return typeOfEngine;
     }
 
-    public void setTypeOfEngine(TypeOfEngine typeOfEngine) {
-        this.typeOfEngine = typeOfEngine;
-    }
-
-    public Airplane(int rangeOfFlight, int cruisingSpeed, String registrationNumber) {
-        super(rangeOfFlight, cruisingSpeed, registrationNumber);
-    }
-
     @Override
-    public abstract int getCarryingCapacity();
-    @Override
-    public abstract int getPassengerCapacity();
+    public void showAircraftSpec() {
+        System.out.println("Technical specifications of " + this.getName() + ": \n" +
+                "Registration number: " + this.getRegistrationNumber() + "\n" +
+                "Range: " + this.getRangeOfFlight() + " meters; \n" +
+                "Cruising speed: " + this.getCruisingSpeed() + " km/h; \n" +
+                "Type of engine: " + this.getTypeOfEngine());
+    }
 }
