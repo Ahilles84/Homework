@@ -1,11 +1,11 @@
 package task_12;
 
-public class GameProcess {
+public class Game {
 
     private final Character player1;
     private final Character player2;
 
-    public GameProcess(Character player1, Character player2) {
+    public Game(Character player1, Character player2) {
         this.player1 = player1;
         this.player2 = player2;
     }
@@ -22,7 +22,7 @@ public class GameProcess {
             if(!player2.isAlive()){
                 player1.setHitPoints(player1.getHitPoints() - Demon.getPostMortDamage());
                 if (!player1.isAlive()){
-                    System.out.println("Draw!");
+                    System.out.println("Draw! Both are dead. :\\");
                 } else {
                     System.out.println(player1.getName() + " won!");
                 }
