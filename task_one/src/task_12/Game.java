@@ -9,18 +9,17 @@ public class Game {
         this.player1 = player1;
         this.player2 = player2;
     }
-
     public static void hit(Character hitter, Character victim){
-        victim.setHitPoints(victim.getHitPoints() - hitter.getDamagePoints());
+        victim.setHealth(victim.getHealth() - hitter.getDamage());
     }
 
     public void fight(){
         int hitCounter = 0;
-        while(player1.isAlive() || player2.isAlive()){
+        while(player1.isAlive() && player2.isAlive()){
             hitCounter++;
             hit(player1,player2);
             if(!player2.isAlive()){
-                player1.setHitPoints(player1.getHitPoints() - Demon.getPostMortDamage());
+                player1.setHealth(player1.getHealth() - Demon.getPostMortDamage());
                 if (!player1.isAlive()){
                     System.out.println("Draw! Both are dead. :\\");
                 } else {

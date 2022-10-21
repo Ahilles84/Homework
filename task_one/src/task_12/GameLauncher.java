@@ -9,7 +9,7 @@ public class GameLauncher {
         roundOne.fight();
 
         Character player3 = new Demon("Morgot",89,2,1);
-        Character player4 = new Knight("Artur", 94,2,5);
+        Character player4 = new Knight("Feanor", 94,2,5);
         Game roundTwo = new Game(player3, player4);
         roundTwo.fight();
 

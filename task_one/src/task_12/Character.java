@@ -2,32 +2,32 @@ package task_12;
 
 public abstract class Character {
     private final String name;
-    private int hitPoints;
-    private final int damagePoints;
+    private int health;
+    private final int damage;
 
     public Character(String name, int hitPoints, int damagePoints) {
         this.name = name;
-        this.hitPoints = hitPoints;
-        this.damagePoints = damagePoints;
+        this.health = hitPoints;
+        this.damage = damagePoints;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int getHealth() {
+        return health;
     }
 
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
-    public int getDamagePoints() {
-        return damagePoints;
+    public int getDamage() {
+        return damage;
     }
 
     public boolean isAlive(){
-        return this.hitPoints > 0;
+        return this.health > 0;
     }
 }
