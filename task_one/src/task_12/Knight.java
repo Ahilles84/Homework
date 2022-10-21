@@ -3,8 +3,8 @@ package task_12;
 public class Knight extends Character {
     private static int dodgeChance;
 
-    public Knight(String name, int hitPoints, int damagePoints, int dodgeChance) {
-        super(name, hitPoints, damagePoints);
+    public Knight(String name, int health, int damage, int dodgeChance) {
+        super(name, health, damage);
         Knight.dodgeChance = dodgeChance;
     }
 

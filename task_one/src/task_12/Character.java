@@ -5,10 +5,10 @@ public abstract class Character {
     private int health;
     private final int damage;
 
-    public Character(String name, int hitPoints, int damagePoints) {
+    public Character(String name, int health, int damage) {
         this.name = name;
-        this.health = hitPoints;
-        this.damage = damagePoints;
+        this.health = health;
+        this.damage = damage;
     }
 
     public String getName() {
