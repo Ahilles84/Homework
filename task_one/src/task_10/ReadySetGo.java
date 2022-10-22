@@ -1,14 +1,15 @@
 package task_10;
 
-import task_8.ATM;
+import task_8.Card;
+import task_8.CardholderService;
 import task_8.DebitCard;
 
 public class ReadySetGo {
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) {
         try {
-            DebitCard debitCard = new DebitCard(1234);
-            ATM.checkPIN(debitCard);
-            CardholderService service = new CardholderService(debitCard, (int) (Math.random() * 1000000), 3, 5);
+            Card debitCard = new DebitCard(1234);
+            CardholderService.checkPIN(debitCard);
+            Service service = new Service((DebitCard) debitCard, (int) (Math.random() * 1000000));
             Thread toppingUp = new TopUpAccount(service);
             Thread withdrawing = new Withdraw(service);
             toppingUp.start();
@@ -18,6 +19,8 @@ public class ReadySetGo {
             System.err.println("We spent all the money!");
         } catch (IllegalArgumentException ex){
             System.out.println(ex.getMessage());
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }
