@@ -1,7 +1,6 @@
 package task_10;
 
 import task_8.Card;
-import task_8.DebitCard;
 
 public class Service {
     private final Card debitCard;
@@ -9,7 +8,7 @@ public class Service {
     public int getAccount() {
         return debitCard.getAccount();
     }
-    public Service(DebitCard debitCard, int startAmount) {
+    public Service(Card debitCard, int startAmount) {
         this.debitCard = debitCard;
         debitCard.setAccount(startAmount);
     }
