@@ -19,7 +19,11 @@ public class Main {
         List<String> newList = myList.stream().
                 filter(str -> !str.contains("3")).
                 sorted(Comparator.comparingInt(str->str.charAt(1))).
-                sorted(Comparator.reverseOrder()).
+                sorted(((o1, o2) -> {
+                    int firstCharComparison = o2.charAt(0) - o1.charAt(0);
+                    int secondCharComparison = -String.CASE_INSENSITIVE_ORDER.compare(o2.substring(1), o1.substring(1));
+                    return firstCharComparison != 0 ? firstCharComparison : secondCharComparison;
+                })).
                 skip(1).
                 map(str -> str.replace("1", "9")).
                 map(String::toUpperCase).
