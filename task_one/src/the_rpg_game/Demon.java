@@ -1,4 +1,4 @@
-package task_12;
+package the_rpg_game;
 
 public class Demon extends Character{
     private static int postMortDamage;
