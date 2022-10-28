@@ -3,10 +3,15 @@ package task_12;
 public class Triangle implements Shape{
     private double height;
     private double base;
-    private ShapeType shapeType = ShapeType.TRIANGLE;
+    private final ShapeType shapeType = ShapeType.TRIANGLE;
 
     public double getHeight() {
         return height;
+    }
+    public Triangle(){}
+    public Triangle(double height, double base) {
+        this.height = height;
+        this.base = base;
     }
 
     public void setHeight(double height) {
@@ -22,7 +27,7 @@ public class Triangle implements Shape{
     }
 
     public ShapeType getShapeType() {
-        return shapeType;
+        return this.shapeType;
     }
 
     @Override
@@ -32,8 +37,6 @@ public class Triangle implements Shape{
 
     @Override
     public String toString() {
-        return "{" +
-                "shapeType=" + shapeType +
-                '}';
+        return "Figure is = " + shapeType;
     }
 }

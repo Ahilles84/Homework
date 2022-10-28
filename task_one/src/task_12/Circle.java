@@ -2,11 +2,13 @@ package task_12;
 
 public class Circle implements Shape{
     private double radius;
-    private ShapeType shapeType = ShapeType.CIRCLE;
+    private final ShapeType shapeType = ShapeType.CIRCLE;
 
-    public ShapeType getShapeType() {
-        return shapeType;
+    public Circle(double radius) {
+        this.radius = radius;
     }
+
+    public Circle() {}
 
     public double getRadius() {
         return radius;
@@ -15,7 +17,9 @@ public class Circle implements Shape{
     public void setRadius(double radius) {
         this.radius = radius;
     }
-
+    public ShapeType getShapeType() {
+        return this.shapeType;
+    }
     @Override
     public double findArea() {
         return radius * radius * Math.PI;
@@ -23,8 +27,6 @@ public class Circle implements Shape{
 
     @Override
     public String toString() {
-        return "{" +
-                "shapeType=" + shapeType +
-                '}';
+        return "Figure is = " + shapeType;
     }
 }
