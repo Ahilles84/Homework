@@ -1,6 +1,9 @@
 package task_12;
 
-public class Triangle implements Shape, Validator {
+import task_12.impl.Shape;
+import task_12.impl.Validatable;
+
+public class Triangle implements Shape, Validatable {
     private double height;
     private double base;
     private final ShapeType shapeType = ShapeType.TRIANGLE;

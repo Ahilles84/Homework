@@ -1,7 +1,7 @@
 package task_12.factory;
 
 import task_12.Circle;
-import task_12.Shape;
+import task_12.impl.Shape;
 import task_12.ShapeType;
 import task_12.Triangle;
 

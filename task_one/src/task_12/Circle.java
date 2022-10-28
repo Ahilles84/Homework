@@ -1,6 +1,9 @@
 package task_12;
 
-public class Circle implements Shape, Validator{
+import task_12.impl.Shape;
+import task_12.impl.Validatable;
+
+public class Circle implements Shape, Validatable {
     private double radius;
     private final ShapeType shapeType = ShapeType.CIRCLE;
 
