@@ -15,6 +15,6 @@ public class ShapeFactory implements Shape {
     }
     @Override
     public double findArea() {
-        return 0;
+        throw new UnsupportedOperationException();
     }
 }
