@@ -6,27 +6,15 @@ import task_12.impl.Validatable;
 public class Circle implements Shape, Validatable {
     private double radius;
     private final ShapeType shapeType = ShapeType.CIRCLE;
-
+    public Circle() {}
     public Circle(double radius) {
         validator(radius);
         this.radius = radius;
     }
-
-    public Circle() {}
-
-    public double getRadius() {
-        return radius;
-    }
-
     public void setRadius(double radius) {
         validator(radius);
         this.radius = radius;
     }
-    public ShapeType getShapeType() {
-        return this.shapeType;
-    }
-
-
     @Override
     public double findArea() {
         return radius * radius * Math.PI;
@@ -34,11 +22,11 @@ public class Circle implements Shape, Validatable {
 
     @Override
     public String toString() {
-        return "Figure is = " + shapeType;
+        return "Figure is = " + shapeType + ", radius = " + radius;
     }
 
-    @Override
-    public void validator(double... measurements) {
-        if(radius<=0) throw new IllegalArgumentException("Measurement must not be negative or zero!");
+
+    public void validator(double measure) {
+        if (measure <= 0) throw new IllegalArgumentException("Measurement must not be negative or zero!");
     }
 }

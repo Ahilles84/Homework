@@ -12,7 +12,7 @@ public class Test {
             Circle figure1 = (Circle) createFigure(ShapeType.CIRCLE);
             Triangle figure2 = (Triangle) createFigure(ShapeType.TRIANGLE);
             figure1.setRadius(1.25478);
-            figure2.setHeight(0.258);
+            figure2.setHeight(7.258);
             figure2.setBase(54.871);
             System.out.println(figure1 + ", area = " + figure1.findArea());
             System.out.println(figure2 + ", area = " + figure2.findArea());
