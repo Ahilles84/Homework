@@ -7,10 +7,10 @@ import task_12.Triangle;
 
 public class ShapeFactory implements Shape {
     public static Shape createFigure(ShapeType shapeType){
-        if (shapeType == ShapeType.CIRCLE) {
-            return new Circle();
-        } else {
-            return new Triangle();
+        switch(shapeType){
+            case CIRCLE: return new Circle();
+            case TRIANGLE: return new Triangle();
+            default: throw new IllegalArgumentException("Wrong shape type!");
         }
     }
     @Override
