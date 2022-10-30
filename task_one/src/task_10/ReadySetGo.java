@@ -16,7 +16,8 @@ public class ReadySetGo {
             withdrawing.start();
             toppingUp.join();
             withdrawing.join();
-            System.err.println("We spent all the money!");
+            Thread.sleep(1000);
+            System.out.println("We spent all the money!");
         } catch (IllegalArgumentException ex){
             System.out.println(ex.getMessage());
         } catch (InterruptedException e) {
