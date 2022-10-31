@@ -24,9 +24,4 @@ public class Circle implements Shape, Validatable {
     public String toString() {
         return "Figure is = " + shapeType + ", radius = " + radius;
     }
-
-
-    public void validator(double measure) {
-        if (measure <= 0) throw new IllegalArgumentException("Measurement must not be negative or zero!");
-    }
 }

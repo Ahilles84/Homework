@@ -37,8 +37,4 @@ public class Triangle implements Shape, Validatable {
         return "Figure is = " + shapeType + ", base = " + base + ", height = " + height;
     }
 
-
-    public void validator(double measure) {
-        if (measure <= 0) throw new IllegalArgumentException("Measurement must not be negative or zero!");
-    }
 }

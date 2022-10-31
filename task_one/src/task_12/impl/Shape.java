@@ -6,5 +6,7 @@ public interface Shape{
     default void setHeight(double height){}
     default void setBase(double base){}
     default void setRadius(double radius){}
+    default void setWidth(double width){}
+    default void setLength(double length){}
 
 }
