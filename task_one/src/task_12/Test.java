@@ -9,8 +9,8 @@ public class Test {
         try {
             //с фабрикой:
 
-            Circle figure1 = (Circle) createFigure(ShapeType.CIRCLE);
-            Triangle figure2 = (Triangle) createFigure(ShapeType.TRIANGLE);
+            Shape figure1 = createFigure(ShapeType.CIRCLE);
+            Shape figure2 = createFigure(ShapeType.TRIANGLE);
             figure1.setRadius(1.25478);
             figure2.setHeight(7.258);
             figure2.setBase(54.871);
