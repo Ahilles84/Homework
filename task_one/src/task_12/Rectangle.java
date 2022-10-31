@@ -4,10 +4,12 @@ import task_12.impl.Shape;
 import task_12.impl.Validatable;
 
 public class Rectangle implements Shape, Validatable {
+    private final ShapeType shapeType = ShapeType.RECTANGLE;
     private double length;
     private double width;
-    private final ShapeType shapeType = ShapeType.RECTANGLE;
-    public Rectangle(){}
+
+    public Rectangle() {
+    }
 
     public Rectangle(double length, double width) {
         validator(length);

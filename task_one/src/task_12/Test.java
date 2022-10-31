@@ -25,8 +25,10 @@ public class Test {
 
             Shape circle2 = new Circle(25);
             Shape triangle2 = new Triangle(24, 74.2);
+            Shape rectangle2 = new Rectangle(12.4, 70.801);
             System.out.println(circle2 + ", area = " + circle2.findArea());
             System.out.println(triangle2 + ", area = " + triangle2.findArea());
+            System.out.println(rectangle2 + ", area = " + rectangle2.findArea());
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
