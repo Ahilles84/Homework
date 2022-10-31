@@ -5,16 +5,12 @@ import task_12.impl.Shape;
 import task_12.ShapeType;
 import task_12.Triangle;
 
-public class ShapeFactory implements Shape {
+public class ShapeFactory {
     public static Shape createFigure(ShapeType shapeType){
         switch(shapeType){
             case CIRCLE: return new Circle();
             case TRIANGLE: return new Triangle();
             default: throw new IllegalArgumentException("Wrong shape type!");
         }
-    }
-    @Override
-    public double findArea() {
-        throw new UnsupportedOperationException();
     }
 }
