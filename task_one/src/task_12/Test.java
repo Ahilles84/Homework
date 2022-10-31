@@ -2,6 +2,8 @@ package task_12;
 
 import task_12.impl.Shape;
 
+import java.lang.reflect.InvocationTargetException;
+
 import static task_12.factory.ShapeFactory.createFigure;
 
 public class Test {
