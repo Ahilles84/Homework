@@ -37,6 +37,6 @@ public class Rectangle implements Shape, Validatable {
 
     @Override
     public String toString() {
-        return "Figure is = " + shapeType + ", length = " + length + ", width = " + width;
+        return "Figure = " + shapeType + ", length = " + length + ", width = " + width;
     }
 }

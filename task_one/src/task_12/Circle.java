@@ -26,6 +26,6 @@ public class Circle implements Shape, Validatable {
 
     @Override
     public String toString() {
-        return "Figure is = " + shapeType + ", radius = " + radius;
+        return "Figure = " + shapeType + ", radius = " + radius;
     }
 }

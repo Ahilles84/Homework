@@ -34,7 +34,7 @@ public class Triangle implements Shape, Validatable {
 
     @Override
     public String toString() {
-        return "Figure is = " + shapeType + ", base = " + base + ", height = " + height;
+        return "Figure = " + shapeType + ", base = " + base + ", height = " + height;
     }
 
 }

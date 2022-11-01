@@ -6,16 +6,23 @@ import task_12.ShapeType;
 import task_12.Triangle;
 import task_12.impl.Shape;
 
-
 public class ShapeFactory {
-    public static Shape createFigure(ShapeType shapeType) {
+    public static Shape createFigure(ShapeType shapeType, double... measurement) {
         switch (shapeType) {
             case CIRCLE:
-                return new Circle();
+                Shape circle = new Circle();
+                circle.setRadius(measurement[0]);
+                return circle;
             case TRIANGLE:
-                return new Triangle();
+                Shape triangle = new Triangle();
+                triangle.setBase(measurement[0]);
+                triangle.setHeight(measurement[1]);
+                return triangle;
             case RECTANGLE:
-                return new Rectangle();
+                Shape rectangle = new Rectangle();
+                rectangle.setWidth(measurement[0]);
+                rectangle.setLength(measurement[1]);
+                return rectangle;
             default:
                 throw new UnsupportedOperationException();
         }
