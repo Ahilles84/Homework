@@ -8,28 +8,12 @@ public class Rectangle implements Shape, Validatable {
     private double length;
     private double width;
 
-    public Rectangle() {
-    }
-
     public Rectangle(double length, double width) {
         validator(length);
         validator(width);
         this.length = length;
         this.width = width;
     }
-
-    @Override
-    public void setWidth(double width) {
-        validator(width);
-        this.width = width;
-    }
-
-    @Override
-    public void setLength(double length) {
-        validator(length);
-        this.length = length;
-    }
-
     @Override
     public double findArea() {
         return length * width;

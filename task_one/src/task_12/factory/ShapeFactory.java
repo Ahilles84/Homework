@@ -10,19 +10,11 @@ public class ShapeFactory {
     public static Shape createFigure(ShapeType shapeType, double... measurement) {
         switch (shapeType) {
             case CIRCLE:
-                Shape circle = new Circle();
-                circle.setRadius(measurement[0]);
-                return circle;
+                return new Circle(measurement[0]);
             case TRIANGLE:
-                Shape triangle = new Triangle();
-                triangle.setBase(measurement[0]);
-                triangle.setHeight(measurement[1]);
-                return triangle;
+                return new Triangle(measurement[0], measurement[1]);
             case RECTANGLE:
-                Shape rectangle = new Rectangle();
-                rectangle.setWidth(measurement[0]);
-                rectangle.setLength(measurement[1]);
-                return rectangle;
+                return new Rectangle(measurement[0], measurement[1]);
             default:
                 throw new UnsupportedOperationException();
         }
