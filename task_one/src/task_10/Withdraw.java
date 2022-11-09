@@ -10,7 +10,7 @@ public class Withdraw extends Thread{
         while(service.getAccount() != 0){
             if (service.getAccount() >= 5) {
                 service.withdraw(5);
-                System.out.println(service.getAccount());
+                System.err.println(service.getAccount());
                 Thread.yield();
             }
         }
