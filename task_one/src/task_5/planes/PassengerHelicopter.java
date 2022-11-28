@@ -1,6 +1,9 @@
-package task_5;
+package task_5.planes;
 
-public class PassengerHelicopter extends Helicopter implements Passenger{
+import task_5.enums.RotorSystem;
+import task_5.impl.Passenger;
+
+public class PassengerHelicopter extends Helicopter implements Passenger {
     private int passengerCapacity;
 
     public PassengerHelicopter(String name, String registrationNumber, int rangeOfFlight, int cruisingSpeed, RotorSystem rotorSystem, int passengerCapacity) {
